@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-   This is HelloWorld Compoent
+      This is card component
     </p>
 
   </div>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "Card",
   props: {
     msg: String
   }
