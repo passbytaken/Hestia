@@ -5,8 +5,6 @@
     <el-tab-pane label="weibo" name="first">微博</el-tab-pane>
     <el-tab-pane label="Youtube" name="fourth" id="card">
 
-      
-
       <el-row v-for="(page, index) of pages" :key="index">
         <el-col :span="2" v-for="(item, i) of page" :key="i" :offset="i > 0 ? 2:1">
           <el-card  class="box-card" shadow="hover">
@@ -20,9 +18,7 @@
       </el-card>
         </el-col>
       </el-row>
-      
-
-      
+         
     </el-tab-pane>
   </el-tabs>
   </div>
