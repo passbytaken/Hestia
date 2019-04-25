@@ -12,7 +12,7 @@
               <span>{{item.name}}</span>
               <el-button style="float: right; padding: 3px 0" type="text">查看</el-button>
             </div>
-            <div v-for="o in item" :key="o" class="text item">
+            <div v-for="o in item" :key="o.id" class="text item">
               {{o}}
             </div>      
       </el-card>
