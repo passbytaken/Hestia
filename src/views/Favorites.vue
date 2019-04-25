@@ -8,14 +8,14 @@
       <div v-if="loading">loading...</div>
     
     <div
-      v-for="currency in info" :key="currency"
+      v-else
+      v-for="currency in info" :key="currency.id"
       class="currency"
     >
       {{ currency.description }}:
       <span class="lighten">
         <span v-html="currency.symbol"></span>{{ currency.rate_float | currencydecimal }}
       </span>
-
     </div>
     </section>
   </div>
@@ -32,6 +32,11 @@ export default {
       errored: false
     }
   },
+  filters: {
+    currencydecimal (value) {
+      return value.toFixed(2)
+    }
+  },
   mounted () {
     axios
       .get('https://api.coindesk.com/v1/bpi/currentprice.json')
@@ -43,12 +48,8 @@ export default {
         this.errored = true
       })
       .finally(() => this.loading = false)
-  },
-  filters: {
-    currencydecimal (value) {
-      return value.toFixed(2)
-    }
   }
+  
   
 }
 </script>
