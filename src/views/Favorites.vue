@@ -53,3 +53,20 @@ export default {
   
 }
 </script>
+<style>
+.fav {
+  background-color: black;
+  width: 60%;
+  margin: 0 auto;
+  border:1px solid #B3BFB8;
+  border-radius: 15px;
+}
+h1 {
+  color: white;
+  
+}
+.currency {
+  color: #B3BFB8
+}
+</style>
+
