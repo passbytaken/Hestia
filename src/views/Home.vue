@@ -1,8 +1,9 @@
 <template>
   <div class="home">
+    <WaterMark></WaterMark>
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <WaterMark></WaterMark>
+    
   </div>
 </template>
 

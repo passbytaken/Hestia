@@ -8,7 +8,7 @@ export default {
         //display text
         inputText: {
             type: String,
-            default: '2019.5.15'
+            default: 'Hello World'
         },
         // 是否允许通过js或开发者工具等途径修改水印DOM节点（水印的id，attribute属性，节点的删除）
         // true为允许，默认不允许
@@ -109,10 +109,11 @@ export default {
       })
     }
   },
-  destroy () {
+  destroyed () {
     // 组件销毁时去除生成在body节点下的水印节点
     if (this.inputDestroy) {
-      this.removeMaskDiv()
+        this.observer.disconnect();
+        this.removeMaskDiv()
     }
   }
 }
