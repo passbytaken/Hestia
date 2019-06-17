@@ -27,6 +27,12 @@ export default new Router({
       name: "fav",
       component: () =>
         import("./views/Favorites.vue")
+    },
+    {
+      path: "/t",
+      name: "t",
+      component: () =>
+        import("./views/Mark.vue")
     }
   ]
 });
